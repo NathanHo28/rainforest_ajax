@@ -2,8 +2,4 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$.get('/products?search=' + searchValue)
-      .done(function(data){
-        console.log(data);
-        $('#products').html(data);
-      });
+$.getScript('/products?search=' + searchValue);
