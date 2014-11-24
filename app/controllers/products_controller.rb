@@ -1,6 +1,10 @@
 class ProductsController < ApplicationController
   def index
-  	@products = Product.all.paginate(page: params[:page], per_page: 4)
+    @products = if params[:search]
+      Product.where("LOWER(name) LIKE LOWER(?)", "%#{params[:search]}%")
+    else 
+      Product.all 
+    end
   end
 
   def show
