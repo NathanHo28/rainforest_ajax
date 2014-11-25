@@ -7,9 +7,13 @@
 		<%= submit_tag "Search" %>
 <% end %>
 
+<p id="products-count"><%= page_entries_info(@products) %></p>
+
 <div id="products">
   <%= render @products %>
 </div>
+
+<div id="index-pagination"><%= paginate @products %></div>
 
 
 

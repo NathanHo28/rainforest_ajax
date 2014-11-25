@@ -1,1 +1,3 @@
-$('#products').html("<%= j(render @products) %>");
+$('#products').append("<%= j(render @products) %>");
+
+$('#index-pagination').html("<%= j(paginate @products) %>");
