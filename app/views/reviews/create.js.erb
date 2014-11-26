@@ -1,4 +1,12 @@
-alert("I’m responding to your request!");
+<% if @review.errors.any? %>
+  $('#review-errors').html("<%= j(render partial: 'products/review_form_errors') %>");
+<% else %>
+  $('#review-list').html("<%= j(render(:partial => 'products/reviews')) %>");
+  $('#review_comment').val('');
+  $('#review-errors').html('');
+<% end %>
 
-$('#review-list').html("<%= j(render(:partial => 'products/reviews')) %>");
+
+
+
 
