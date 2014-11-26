@@ -46,3 +46,6 @@ gem 'faker'
 # gem 'debugger', group: [:development, :test]
 gem 'pry-rails'
 gem 'awesome_print'
+
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
