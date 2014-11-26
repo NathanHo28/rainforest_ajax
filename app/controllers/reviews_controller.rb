@@ -18,17 +18,18 @@ class ReviewsController < ApplicationController
     #   product_id: @product.id,
     #   user_id: current_user.id
     # )
+
     respond_to do |format|
-  	  if @review.save
-        format.html { redirect_to products_path, notice: 'Review created successfully'}
-        format.js
+      if @review.save
+        format.html { redirect_to product_path(@product.id), notice: 'Review added.' }
+        format.js {} # This will look for app/views/reviews/create.js.erb
         # redirect_to products_path(@product), notice: 'Review created successfully'
       else
-        format.html {render 'products/show', alert: 'There was an error'}
-        format.js
+        format.html { render 'products/show', alert: 'There was an error.'  }
+        format.js {} # This will look for app/views/reviews/create.js.erb
         # render 'products/show'
       end
-    end
+    end    
   end
 
   def destroy
