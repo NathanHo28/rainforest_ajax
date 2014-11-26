@@ -39,6 +39,8 @@ gem 'kaminari'
 
 gem 'faker'
 
+gem 'quiet_assets'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
